@@ -191,6 +191,7 @@ module Stupidedi
                               "WH" => "Master Reference (Link) Number",
                               "BT" => "Bill To",
                               "UC" => "Casepack UPC",
+                              "PR" => "Price Quote",
                               "ZZ" => "Mutually Defined"
           ))
 
