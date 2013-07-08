@@ -1,4 +1,4 @@
-# encoding: ISO-8859-1
+# encoding: ISO-8859-15
 
 module Stupidedi
   module Reader
@@ -54,6 +54,13 @@ module Stupidedi
     # @private
     # @return [Regexp]
     #_CONTROL  = Regexp.new("[^#{Regexp.quote(H_EITHER.keys.join)}]")
+
+
+    #convert C_BYTES to utf-8 to match incoming data from elvis
+    C_BYTES = C_BYTES.encode("UTF-8").freeze
+
+    #regexp matches every character NOT in iso-8859-15
+    R_SANITIZE = Regexp.new("[^#{Regexp.quote(C_BYTES)}]")
 
     class << self
 
