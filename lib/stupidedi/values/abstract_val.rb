@@ -124,6 +124,16 @@ module Stupidedi
         end
       end
 
+      def sanitize!
+        if leaf?
+         if present? and not separator? and respond_to?(:value) and value.is_a?(String)
+           self.value.gsub!(Reader::R_SANITIZE, '?')
+         end
+        else
+          children.each {|c| c.sanitize }
+        end
+      end
+
     end
 
   end

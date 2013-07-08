@@ -14,6 +14,7 @@ module Stupidedi
       #
       # @return out
       def write(out = "")
+        @zipper.node.sanitize!
         common  = @separators.characters & @zipper.node.characters
         message = common.to_a.map(&:inspect).join(", ")
 
