@@ -124,13 +124,11 @@ module Stupidedi
         end
       end
 
-      def sanitize!
+      def invalid_characters?
         if leaf?
-         if present? and not separator? and respond_to?(:value) and value.is_a?(String)
-           self.value.gsub!(Reader::R_SANITIZE, '?')
-         end
+          Reader::R_SANITIZE.match(value) if present? and not separator? and respond_to?(:value) and value.is_a?(String)
         else
-          children.each {|c| c.sanitize }
+          children.map {|c| c.invalid_characters? }.any?
         end
       end
 

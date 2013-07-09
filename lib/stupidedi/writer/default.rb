@@ -14,7 +14,9 @@ module Stupidedi
       #
       # @return out
       def write(out = "")
-        @zipper.node.sanitize!
+        raise Exceptions::InvalidCharacterError,
+              "user input contains invalid characters" if @zipper.node.invalid_characters?
+
         common  = @separators.characters & @zipper.node.characters
         message = common.to_a.map(&:inspect).join(", ")
 
