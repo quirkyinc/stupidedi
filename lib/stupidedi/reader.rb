@@ -37,7 +37,7 @@ module Stupidedi
 
     # @private
     # @return [String]
-    C_BYTES    = (0..255).inject(""){|string, c| string << c }.freeze
+    C_BYTES    = (0..255).inject(""){|string, c| string << c }
 
     # @private
     # @return [Hash]
@@ -57,7 +57,7 @@ module Stupidedi
 
 
     #convert C_BYTES to utf-8 to match incoming data from elvis
-    C_BYTES = C_BYTES.encode("UTF-8").freeze
+    C_BYTES.encode!("UTF-8").freeze
 
     #regexp matches every character NOT in iso-8859-15
     R_SANITIZE = Regexp.new("[^#{Regexp.quote(C_BYTES)}]")
