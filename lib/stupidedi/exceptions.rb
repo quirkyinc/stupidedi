@@ -1,6 +1,7 @@
 module Stupidedi
   module Exceptions
     autoload :StupidediError,         "stupidedi/exceptions/stupidedi_error"
+    autoload :InvalidCharacterError,  "stupidedi/exceptions/invalid_character_error"
     autoload :InvalidElementError,    "stupidedi/exceptions/invalid_element_error"
     autoload :InvalidSchemaError,     "stupidedi/exceptions/invalid_schema_error"
     autoload :OutputError,            "stupidedi/exceptions/output_error"
