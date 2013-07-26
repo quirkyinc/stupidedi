@@ -23,11 +23,13 @@ module Stupidedi
                               "Z" => "Mutually defined"
           ))
 
-          E26   = t::ID.new(:E26   , "Country Code"                        , 2, 3,
+          E26   = t::ID.new(:E26   , "Country Code"                        , 1, 3,
                             s::CodeList.external("5")
                             )
 
           E28   = t::Nn.new(:E28  , "Group Control Number"                 , 1, 9, 0)
+
+          E31   = t::AN.new(:E28  , "Adjustment Number"                 , 1, 22)
 
           E40   = t::ID.new(:E40   , "Equipment Description Code"          , 2, 2,
                             s::CodeList.build(
@@ -192,6 +194,9 @@ module Stupidedi
                               "BT" => "Bill To",
                               "UC" => "Casepack UPC",
                               "PR" => "Price Quote",
+                              "FR" => "From Inventory Status",
+                              "LT" => "Lot Number",
+                              "TO" => "To Inventory Status",
                               "ZZ" => "Mutually Defined"
           ))
 
@@ -256,7 +261,22 @@ module Stupidedi
                               "K" => "Ship Not Later Than Time",
                               "G" => "Deliver Not Before Time",
                               "L" => "Deliver Not Later Than Time",
+                              "W" => "Effective Time",
                               "1" => "Must Respond By"
+          ))
+
+          E181  = t:: ID.new(:E181 , "Quantity or Status Adjustment Reason Code"  , 1, 2,
+                            s::CodeList.build(
+                              "CC" => "Cycle Counts",
+                              "CR" => "Customer Return",
+                              "DM" => "Damaged",
+                              "RD" => "Adjustment Made For Return Error",
+                              "RE" => "Receipt Error",
+                              "RO" => "Return Overages",
+                              "RS" => "Return Shortages",
+                              "SE" => "Shipping Error",
+                              "VE" => "Vendor Packaging Issue",
+                              "KC" => "Kit Creation"
           ))
 
           E183  = t:: R.new(:E183 , "Volume"                               , 1, 8)
@@ -318,7 +338,7 @@ module Stupidedi
 
           E335  = t::ID.new(:E335 , "Transportation Terms Code"            , 3, 3)
 
-          E337  = t::TM.new(:E337 , "Time"                                 , 4, 4)
+          E337  = t::TM.new(:E337 , "Time"                                 , 4, 8)
 
           E346  = t::ID.new(:E346 , "Application Type"                     , 2, 2,
                             s::CodeList.build(
@@ -424,6 +444,7 @@ module Stupidedi
                             s::CodeList.build(
                               "02" => "Requested Delivery Date",
                               "04" => "Purchase Order Date",
+                              "04" => "Effective Date",
                               "10" => "Requested Ship Date",
                               "11" => "Shipped Date",
                               "17" => "Estimated Delivery Date",
@@ -454,8 +475,10 @@ module Stupidedi
                               "N" => "Original",
                               "R" => "Change"
           ))
-          
+
           E474  = t::AN.new(:E474 , "Master Reference Number"              , 1, 22)
+
+          E477  = t::R.new(:E477 , "Credit/Debit Quantity"                 , 1, 10)
 
           E479  = t::ID.new(:E479 , "Functional Identifier Code"           , 2, 2,
                             s::CodeList.build(
@@ -508,7 +531,8 @@ module Stupidedi
 
           E623  = t::ID.new(:E623 , "Time Code"                           , 2, 2,
                             s::CodeList.build(
-                              "LT" => "Local Time (Preferred Usage - Exlain in detail)"
+                              "LT" => "Local Time (Preferred Usage - Exlain in detail)",
+                              "CD" => "Central Daylight Time"
           ))
 
           E639  = t::ID.new(:E639 , "Basis of Unit Price Code"                           , 2, 2,
