@@ -12,15 +12,12 @@ module Stupidedi
             d::TableDef.header("Table 1 - Header",
               s::ST.use( 10, r::Mandatory, d::RepeatCount.bounded(1)),
               s::W15.use( 20, r::Mandatory, d::RepeatCount.bounded(1)),
-              d::LoopDef.build("N1", d::RepeatCount.bounded(100),
-                s::N1.use( 40, r::Mandatory,  d::RepeatCount.bounded(1)),
-              ),
-              s::G62.use( 110, r::Optional,  d::RepeatCount.bounded(20)),
+              s::N1.use( 40, r::Mandatory, d::RepeatCount.bounded(1)),
+              s::G62.use( 110, r::Mandatory, d::RepeatCount.bounded(1)),
             ),
 
-
             d::TableDef.header("Table 2 - Detail",
-              d::LoopDef.build("W01", d::RepeatCount.bounded(9999),
+              d::LoopDef.build("W19", d::RepeatCount.bounded(9999),
                 s::W19.use( 20, r::Mandatory,  d::RepeatCount.bounded(1)),
                 s::N9.use( 40, r::Optional, d::RepeatCount.bounded(10)),
               )

@@ -52,6 +52,7 @@ config.editor.tap do |c|
   c.register(Stupidedi::Guides::FortyTen::X12::GF990) { Stupidedi::Editor::X12 }
 end
 
+config = Stupidedi::Config.default
 parser = Stupidedi::Builder::StateMachine.build(config)
 start  = Time.now
 

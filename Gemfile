@@ -4,7 +4,8 @@
 source "http://rubygems.org"
 
 gem "called_from", :platforms => [:ruby_18, :mri_18, :mingw_18]
-
+gem "pry"
+gem "pry-debugger"
 group :development do
   gem "rake"
   gem "rspec"      ,"~> 2.8.0"
