@@ -3,6 +3,7 @@ GEM
   specs:
     blankslate (3.1.2)
     called_from (0.1.0)
+    coderay (1.0.9)
     columnize (0.3.6)
     debugger (1.6.1)
       columnize (>= 0.3.1)
@@ -39,6 +40,8 @@ DEPENDENCIES
   blankslate
   called_from
   debugger
+  pry
+  pry-debugger
   rake
   rcov (~> 0.9.9)
   rdiscount (~> 1.6.8)

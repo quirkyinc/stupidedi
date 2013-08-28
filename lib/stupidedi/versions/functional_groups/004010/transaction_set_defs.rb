@@ -39,6 +39,10 @@ module Stupidedi
           # 004010X... Response to a Load Tender
           autoload :GF990, # Response to a Load Tender
             "stupidedi/versions/functional_groups/004010/transaction_set_defs/GF990"
+
+          # 004010X... Warehouse Inventory Adjustment Advice
+          autoload :AW947,
+            "stupidedi/versions/functional_groups/004010/transaction_set_defs/AW947"
         end
       end
     end

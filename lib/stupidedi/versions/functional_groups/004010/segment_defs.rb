@@ -166,8 +166,14 @@ module Stupidedi
           autoload :W14,
             "stupidedi/versions/functional_groups/004010/segment_defs/W14"
 
+          autoload :W15,
+            "stupidedi/versions/functional_groups/004010/segment_defs/W15"
+
           autoload :W17,
             "stupidedi/versions/functional_groups/004010/segment_defs/W17"
+
+          autoload :W19,
+            "stupidedi/versions/functional_groups/004010/segment_defs/W19"
 
           autoload :W20,
             "stupidedi/versions/functional_groups/004010/segment_defs/W20"
