@@ -160,6 +160,9 @@ module Stupidedi
           autoload :W08,
             "stupidedi/versions/functional_groups/004010/segment_defs/W08"
 
+          autoload :W10,
+            "stupidedi/versions/functional_groups/004010/segment_defs/W10"
+
           autoload :W12,
             "stupidedi/versions/functional_groups/004010/segment_defs/W12"
 
