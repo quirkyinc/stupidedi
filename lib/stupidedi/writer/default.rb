@@ -14,8 +14,12 @@ module Stupidedi
       #
       # @return out
       def write(out = "")
-        raise Exceptions::InvalidCharacterError,
-              "user input contains invalid characters" if @zipper.node.invalid_characters?
+
+        begin
+          @zipper.node.characters
+        rescue ArgumentError
+          raise Exceptions::InvalidCharacterError, "user input contains invalid characters"
+        end
 
         common  = @separators.characters & @zipper.node.characters
         message = common.to_a.map(&:inspect).join(", ")
@@ -29,7 +33,7 @@ module Stupidedi
         return out
       end
 
-    private
+      private
 
       def recurse(value, separators, out)
         return if value.invalid?
