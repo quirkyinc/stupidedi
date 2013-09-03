@@ -16,13 +16,14 @@ module Stupidedi
                 s::N1.use( 140, r::Mandatory,  d::RepeatCount.bounded(3))
               ),
               s::G62.use( 110, r::Optional,  d::RepeatCount.bounded(2)),
-              s::W27.use(130, r::Mandatory ,  d::RepeatCount.bounded(1))
+              s::W27.use(130, r::Mandatory ,  d::RepeatCount.bounded(1)),
+              s::W10.use(130, r::Optional,  d::RepeatCount.bounded(1))
             ),
 
             d::TableDef.header("Table 2 - Detail",
               d::LoopDef.build("W04", d::RepeatCount.bounded(10000),
                 s::W04.use( 220, r::Mandatory,  d::RepeatCount.bounded(1)),
-                s::N9.use(240, r::Optional, d::RepeatCount.bounded(2)),
+                s::N9.use(240, r::Optional, d::RepeatCount.bounded(2))
               )
             ),
 
