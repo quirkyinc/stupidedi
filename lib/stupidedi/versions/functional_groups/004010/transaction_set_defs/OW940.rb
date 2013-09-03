@@ -20,7 +20,7 @@ module Stupidedi
               ),
               s::N9.use( 90, r::Optional, d::RepeatCount.bounded(10)),
               s::G62.use( 110, r::Optional,  d::RepeatCount.bounded(10)),
-              s::NTE.use( 120, r::Optional,  d::RepeatCount.bounded(1)),
+              s::NTE.use( 120, r::Optional,  d::RepeatCount.bounded(10)),
               s::W66.use( 140, r::Mandatory ,  d::RepeatCount.bounded(1))
             ),
 
