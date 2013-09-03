@@ -124,14 +124,6 @@ module Stupidedi
         end
       end
 
-      def invalid_characters?
-        if leaf?
-          Reader::R_SANITIZE.match(value) if present? and not separator? and respond_to?(:value) and value.is_a?(String)
-        else
-          children.map {|c| c.invalid_characters? }.any?
-        end
-      end
-
     end
 
   end
