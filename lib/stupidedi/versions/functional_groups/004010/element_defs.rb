@@ -387,7 +387,10 @@ module Stupidedi
 
           E363  = t::ID.new(:E363  , "Note Reference Code"                 , 3, 3,
                             s::CodeList.build(
-                              "ZZZ" => "Mutually Defined"
+                              "ZZZ" => "Mutually Defined",
+                              "IST" => "Instruction",
+                              "OTH" => "Inventor",
+                              "OTN" => "Influence"
           ))
 
           E364  = t::AN.new(:E364  , "Communication Number"                , 1, 80)
