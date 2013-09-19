@@ -18,6 +18,7 @@ module Stupidedi
                 s::N3.use( 60, r::Optional, d::RepeatCount.bounded(2)),
                 s::N4.use( 70, r::Optional, d::RepeatCount.bounded(1))
               ),
+              s::PER.use( 90, r::Optional, d::RepeatCount.bounded(1)),
               s::N9.use( 90, r::Optional, d::RepeatCount.bounded(10)),
               s::G62.use( 110, r::Optional,  d::RepeatCount.bounded(10)),
               s::NTE.use( 120, r::Optional,  d::RepeatCount.bounded(12)),
