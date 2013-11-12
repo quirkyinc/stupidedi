@@ -33,7 +33,8 @@ module Stupidedi
               d::LoopDef.build("W01", d::RepeatCount.bounded(9999),
                 s::W01.use( 20, r::Mandatory,  d::RepeatCount.bounded(1)),
                 s::N9.use( 40, r::Optional, d::RepeatCount.bounded(200)),
-                s::W20.use( 50, r::Mandatory,  d::RepeatCount.bounded(1))
+                s::NTE.use( 60, r::Optional,  d::RepeatCount.bounded(2)),
+                s::W20.use( 80, r::Mandatory,  d::RepeatCount.bounded(1)),
               )
             ),
 

@@ -390,7 +390,9 @@ module Stupidedi
                               "ZZZ" => "Mutually Defined",
                               "INS" => "Instruction",
                               "OTH" => "Inventor",
-                              "OTN" => "Influence"
+                              "OTN" => "Influence",
+                              "GWT" => "Gift Wrap To Field",
+                              "GWF" => "Gift Wrap From Field"
           ))
 
           E364  = t::AN.new(:E364  , "Communication Number"                , 1, 80)
