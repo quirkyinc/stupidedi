@@ -506,7 +506,8 @@ module Stupidedi
                               "SW" => "Warehouse Shipping Advice",
                               "AR" => "Warehouse Stock Transfer",
                               "RE" => "Warehouse Stock Transfer Receipt Advice",
-                              "FA" => "Functional Acknowledgment"
+                              "FA" => "Functional Acknowledgment",
+                              "AW" => "Warehouse Inventory Adjustment Advice"
           ))
 
           E480  = t::AN.new(:E480 , "Version / Release / Identifier Code"  , 1, 12,
