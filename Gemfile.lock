@@ -3,16 +3,24 @@ GEM
   specs:
     blankslate (3.1.2)
     called_from (0.1.0)
-    coderay (1.0.9)
+    coderay (1.1.0)
     columnize (0.3.6)
-    debugger (1.6.1)
+    debugger (1.6.3)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.3)
+      debugger-ruby_core_source (~> 1.2.4)
     debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.3)
+    debugger-ruby_core_source (1.2.4)
     diff-lcs (1.1.3)
+    method_source (0.8.2)
     multi_json (1.7.7)
+    pry (0.9.12.4)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-debugger (0.2.2)
+      debugger (~> 1.3)
+      pry (~> 0.9.10)
     rake (10.1.0)
     rcov (0.9.11)
     rdiscount (1.6.8)
@@ -28,6 +36,7 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
+    slop (3.4.7)
     term-ansicolor (1.2.2)
       tins (~> 0.8)
     tins (0.8.3)
@@ -39,7 +48,6 @@ PLATFORMS
 DEPENDENCIES
   blankslate
   called_from
-  debugger
   pry
   pry-debugger
   rake
