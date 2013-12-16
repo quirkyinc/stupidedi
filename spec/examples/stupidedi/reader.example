@@ -96,7 +96,7 @@ describe Stupidedi::Reader do
       is_extended?('>').should be_true
       is_extended?('~').should be_true
       is_extended?('^').should be_true
-      is_extended?('`').should be_true
+      is_extended?('`').should be_false
     end
 
     it "includes national characters" do
