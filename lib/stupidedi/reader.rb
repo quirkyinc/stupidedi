@@ -37,7 +37,7 @@ module Stupidedi
 
     # @private
     # @return [String]
-    C_BYTES    = (0..255).inject(""){|string, c| string << c }.freeze
+    C_BYTES    = (0..255).select{|c| c != 96 }.inject(""){|string, c| string << c }.freeze
 
     # @private
     # @return [Hash]
