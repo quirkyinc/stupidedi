@@ -17,8 +17,8 @@ module Stupidedi
 
         begin
           @zipper.node.characters
-        rescue ArgumentError
-          raise Exceptions::InvalidCharacterError, "user input contains invalid characters"
+        rescue ArgumentError => e
+          raise Exceptions::InvalidCharacterError, "user input contains invalid characters: #{e.message}"
         end
 
         common  = @separators.characters & @zipper.node.characters

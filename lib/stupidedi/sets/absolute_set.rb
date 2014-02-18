@@ -99,7 +99,6 @@ module Stupidedi
       # @return [AbsoluteSet]
       def map
         mask = 0
-
         @universe.each do |value, n|
           unless @mask[n].zero?
             value = yield(value)
@@ -267,7 +266,7 @@ module Stupidedi
               mask |= (1 << n)
             elsif strict
               raise ArgumentError,
-                "universe does not contain element #{x.inspect}"
+                "invalid character #{x.inspect} in #{other.join}"
             end
           end
         end
