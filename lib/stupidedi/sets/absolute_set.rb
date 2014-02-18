@@ -266,7 +266,7 @@ module Stupidedi
               mask |= (1 << n)
             elsif strict
               raise ArgumentError,
-                "invalid character #{x.inspect} in #{other.join}"
+                "invalid character #{x.inspect} in #{other.to_s}"
             end
           end
         end

@@ -541,7 +541,7 @@ describe Stupidedi::Sets::AbsoluteSet do
           r = Stupidedi::Sets.build(b.to_a)
 
           lambda { a | r }.should \
-            raise_error(/universe does not contain/)
+            raise_error
         end
       end
     end
@@ -596,7 +596,7 @@ describe Stupidedi::Sets::AbsoluteSet do
           r = b.to_a
 
           lambda { a | r }.should \
-            raise_error(/universe does not contain/)
+            raise_error(/invalid character/)
         end
       end
     end
@@ -1118,7 +1118,7 @@ describe Stupidedi::Sets::AbsoluteSet do
           r = Stupidedi::Sets.build(b.to_a)
 
           lambda { a ^ r }.should \
-            raise_error(/universe does not contain/)
+            raise_error
         end
       end
     end
@@ -1173,7 +1173,7 @@ describe Stupidedi::Sets::AbsoluteSet do
           r = b.to_a
 
           lambda { a ^ r }.should \
-            raise_error(/universe does not contain/)
+            raise_error(/invalid character/)
         end
       end
     end
@@ -1568,7 +1568,7 @@ describe Stupidedi::Sets::AbsoluteSet do
           [a, (b.to_a | c.to_a.map(&:upcase))]
         end.check do |a, b|
           lambda { a.replace(b) }.should \
-            raise_error(/universe does not contain/)
+            raise_error(/invalid character/)
         end
       end
     end
